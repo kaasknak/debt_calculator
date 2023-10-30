@@ -19,7 +19,6 @@ def main():
         if debt_left < payment:
             paid = paid + debt_left*(1+interest/100)**(1/12)
             debt_left = 0
-            print("ping")
         else:
             debt_left = debt_left*(1+interest/100)**(1/12)-payment
             paid = paid + payment
@@ -32,9 +31,6 @@ def main():
     close()
 
 def enough(d, i, p):
-    print(d)
-    print(i)
-    print(p)
     increase = d*((1+i/100)**(1/12)-1)
     if increase > p:
         print("De toename door de rente is groter dan je aflossing.\nDeze schuld kan je niet zo aflossen.\nProbeer opnieuw met een lager bedrag of een hogere afbetaling.")
