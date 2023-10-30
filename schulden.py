@@ -10,7 +10,6 @@ def main():
     print("Geef de eenmalige extra aflossing op:")
     extra = float(input())
     debt = debt - extra
-    print(debt)
     enough(debt, interest, payment)
     debt_left = debt
     months = 0
@@ -27,7 +26,7 @@ def main():
     years_whole = math.floor(years)
     months_left = months - years_whole*12
     print("Schuld afbetaald na "+str(years_whole)+" jaren en "+str(months_left)+" maanden.")
-    print("Totaal bedrag betaald: €"+ str(paid)+"\n\n")
+    print("Totaal bedrag betaald: €"+ str(paid)+" + €"+str(extra)+" aan extra aflossing.\n\n")
     close()
 
 def enough(d, i, p):
